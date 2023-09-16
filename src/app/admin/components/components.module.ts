@@ -11,8 +11,6 @@ import { DashboardsModule } from './dashboards/dashboards.module';
 
 @NgModule({
   declarations: [
-    ProductsComponent,
-    CustomersComponent
   ],
   imports: [
     CommonModule,
