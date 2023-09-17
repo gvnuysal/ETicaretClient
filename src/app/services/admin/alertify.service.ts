@@ -14,9 +14,6 @@ export class AlertifyService {
       msg.dismissOthers()
     }
   }
-  dismiss() {
-    alertify.dismissAll()
-  }
 }
 
 export enum MessageType {
