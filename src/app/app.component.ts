@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 declare var $:any
 @Component({
   selector: 'app-root',
@@ -8,4 +9,10 @@ declare var $:any
 export class AppComponent {
 
   title = 'ETicaretClient';
+  /**
+   *
+   */
+  constructor(private readonly toasterService: ToastrService) { 
+    toasterService.success('Merhaba')
+  }
 }  
