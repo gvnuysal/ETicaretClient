@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-declare var $:any
+import { CustomerToastrService, ToasterMessageType, ToasterPositionType } from './services/ui/customer-toastr.service';
+declare var $: any
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,4 +9,8 @@ declare var $:any
 export class AppComponent {
 
   title = 'ETicaretClient';
+  constructor(private readonly toastrService: CustomerToastrService) {
+    toastrService.message('Güven Message', 'Title', { messageType: ToasterMessageType.Success, position: ToasterPositionType.BottomCenter })
+  }
+
 }  

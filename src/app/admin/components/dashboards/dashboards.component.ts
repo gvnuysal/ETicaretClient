@@ -8,12 +8,18 @@ import { AlertifyService, MessageType, Position } from 'src/app/services/admin/a
 })
 export class DashboardsComponent implements OnInit {
 
-  constructor(private alertifyService:AlertifyService) { }
+  constructor(private alertifyService: AlertifyService) { }
 
   ngOnInit(): void {
   }
   showMessage() {
-    this.alertifyService.message("Merhaba",{delay:3,dismissOthers:true,messageType:MessageType.Success,position:Position.BottomLeft})
+    this.alertifyService.message("Merhaba",
+      {
+        delay: 3,
+        dismissOthers: true,
+        messageType: MessageType.Success,
+        position: Position.BottomRight
+      })
   }
 
 }
