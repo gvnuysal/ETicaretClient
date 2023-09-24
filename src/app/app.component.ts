@@ -12,7 +12,10 @@ export class AppComponent {
   title = 'ETicaretClient';
   constructor(private readonly toastrService: CustomerToastrService) {
     toastrService.message('Güven Message', 'Title', { messageType: ToasterMessageType.Success, position: ToasterPositionType.BottomCenter })
-    
+
   }
 
-}  
+}
+$.get('https://localhost:7194/api/products', data => {
+  console.log(data)
+})
