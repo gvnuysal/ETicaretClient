@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injector, OnInit } from '@angular/core';
+import { BaseComponent } from 'src/app/base/base.component';
 import { AlertifyService, MessageType, Position } from 'src/app/services/admin/alertify.service';
 
 @Component({
@@ -6,20 +7,18 @@ import { AlertifyService, MessageType, Position } from 'src/app/services/admin/a
   templateUrl: './dashboards.component.html',
   styleUrls: ['./dashboards.component.css']
 })
-export class DashboardsComponent implements OnInit {
+export class DashboardsComponent extends BaseComponent implements OnInit {
 
-  constructor(private alertifyService: AlertifyService) { }
+  constructor(injector:Injector) {
+    super(injector)
+  }
+
 
   ngOnInit(): void {
+    this.showSpinner()
   }
   showMessage() {
-    this.alertifyService.message("Merhaba",
-      {
-        delay: 3,
-        dismissOthers: true,
-        messageType: MessageType.Success,
-        position: Position.BottomRight
-      })
+   
   }
 
 }
