@@ -33,6 +33,6 @@ export enum Position {
 export class AlertifyOptions{
   messageType: MessageType=MessageType.Success;
   position: Position=Position.BottomRight;
-  delay: number=3;
+  delay?: number=3;
   dismissOthers: boolean=false;
 }

@@ -43,7 +43,7 @@ export class HttpClientService {
       url = `${this.url(requestParameters)}`
     }
     return this.httpClient.put<T>(url, body, {
-                                  headers: requestParameters.headers
+      headers: requestParameters.headers
     })
   }
   delete<T>(requestParameters: Partial<RequestParameters>, id: string): Observable<T> {
@@ -54,7 +54,7 @@ export class HttpClientService {
     } else {
       url = `${this.url(requestParameters)}/${id}`
     }
-    return this.httpClient.delete<T>(url,{headers:requestParameters.headers})
+    return this.httpClient.delete<T>(url, { headers: requestParameters.headers })
   }
 }
 

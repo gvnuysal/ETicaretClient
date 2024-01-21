@@ -14,13 +14,7 @@ export class ProductsComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.showSpinner()
-    this.httpClientService.get<Product>({
-      controller: 'products'
-    }).subscribe(data => console.log(data))
-    this.httpClientService.delete({
-      controller: 'products'
-    }, 'f4b2e3bc-9083-48df-bbaf-7718e1122429').subscribe()
+    
   }
 
 }
