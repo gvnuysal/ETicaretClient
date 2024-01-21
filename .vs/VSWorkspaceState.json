@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src\\app",
+    "\\src\\app\\admin",
+    "\\src\\app\\admin\\components",
+    "\\src\\app\\admin\\components\\customers",
+    "\\src\\app\\admin\\components\\products",
+    "\\src\\app\\admin\\components\\products\\create"
+  ],
+  "PreviewInSolutionExplorer": false
+}
