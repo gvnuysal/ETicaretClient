@@ -13,7 +13,7 @@ import { ProductService } from 'src/app/services/common/models/products/product.
 export class CreateComponent extends BaseComponent implements OnInit {
 
 
-  constructor(private productService: ProductService,injector:Injector,private alertify:AlertifyService) {
+  constructor(private productService: ProductService, injector: Injector, private alertify: AlertifyService) {
     super(injector)
   }
 
@@ -32,7 +32,13 @@ export class CreateComponent extends BaseComponent implements OnInit {
         position: Position.BottomRight,
         dismissOthers: true
       })
+    }, errorMessage => {
+      debugger
+      this.alertify.message(errorMessage, {
+        dismissOthers: true,
+        messageType: MessageType.Error,
+        position:Position.BottomRight
+      })
     })
-
   }
 }

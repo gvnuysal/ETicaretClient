@@ -9,7 +9,10 @@ export class BaseComponent {
   }
 
   showSpinner() {
-    this.spinnerService.show() 
+    this.spinnerService.show()
+    setTimeout(() => {
+      this.hideSpinner()
+    }, 1500);
   }
   hideSpinner() {
     this.spinnerService.hide()
